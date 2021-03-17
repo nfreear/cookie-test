@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "@nfreear/cookie-notice",
+  "X_OR_name": "@iet-ou/cookie-consent",
+  "description": "Work-in-progress! - © 2021 Nick Freear.",
+  "license": "proprietary",
+  "repository": "https://github.com/nfreear/iet-ou-cookie-notice.git",
+  "scripts": {
+    "start": "node bin/http-server.js",
+    "start:old": "node bin/http-server.BAK.js",
+    "start:old:mw": "live-server --port=8080 --no-browser --cors --middleware=../../bin/live-server.js",
+    "fix": "semistandard --fix",
+    "test": "semistandard"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "semistandard": "^16.0.0"
+  }
+}

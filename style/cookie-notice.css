@@ -1,0 +1,45 @@
+
+.iet-ou-cookie-notice {
+  background: #222;
+  color: #eee;
+  font: 1.05rem/1.5 sans-serif;
+  padding: 0 .5rem;
+  position: fixed;
+  text-align: center;
+  left: 0;
+  right: 0;
+  x-width: 100%;
+  height: auto;
+  max-height: 35rem;
+}
+
+.iet-ou-cookie-notice.top {
+  top: 0;
+}
+
+.iet-ou-cookie-notice.bottom {
+  bottom: 0;
+}
+
+.iet-ou-cookie-notice.hide {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .9s;
+}
+
+.iet-ou-cookie-notice p {
+  margin: 1rem auto;
+  max-width: 48rem;
+}
+
+.iet-ou-cookie-notice a {
+  color: #eee;
+}
+
+.iet-ou-cookie-notice button {
+  cursor: pointer;
+  font-size: 1rem;
+  padding: .5rem;
+  margin: .3rem 1rem;
+  width: 9.5rem;
+}
