@@ -2,6 +2,8 @@
 # package-lock.json
 node_modules
 *BAK*
+.DS_Store
+data
 
 bookmarklet.js
-http-server.js
+# http-server.js

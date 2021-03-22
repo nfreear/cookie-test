@@ -6,6 +6,7 @@
   "license": "proprietary",
   "repository": "https://github.com/nfreear/iet-ou-cookie-notice.git",
   "scripts": {
+    "convert": "node bin/cookie-csv.js",
     "start": "node bin/http-server.js",
     "start:old": "node bin/http-server.BAK.js",
     "start:old:mw": "live-server --port=8080 --no-browser --cors --middleware=../../bin/live-server.js",

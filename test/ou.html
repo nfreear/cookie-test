@@ -1,6 +1,7 @@
 <!doctype html> <title>Cookie-notice test</title>
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
 
 <link rel="stylesheet" href="../style/cookie-notice.css">
 
@@ -16,10 +17,15 @@
 
 
 <script>
-const GA_ANALYTICS_ID = 'UA-XXXXX-Y'; // 'UA-1036645-1'; // EDIT !!
+const GA_ANALYTICS_ID = 'UA-8330079-10'; // 'UA-1036645-1'; // EDIT !!
 
 window.addEventListener('iet-ou.cookie-notice:reject', ev => {
   console.debug('Event received:', ev);
+
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
+  // window[`ga-disable-${GA_ANALYTICS_ID}`] = true;
+
+  createAnalytics(false);
 });
 
 window.addEventListener('iet-ou.cookie-notice:accept', ev => {
@@ -27,20 +33,38 @@ window.addEventListener('iet-ou.cookie-notice:accept', ev => {
 
   // Do something, for example, setup analytics ...?!
 
-  (function(i,s,o,g,r,a,m){
-    i['GoogleAnalyticsObject']=r;
-      i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments) },i[r].l =1*new Date();
-      a=s.createElement(o),m=s.getElementsByTagName(o)[0];
-      a.async=1;
-      a.src=g;
-      m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', GA_ANALYTICS_ID, 'auto');
-    ga('set', 'anonymizeIp', true);      // Privacy-related!
-    ga('set', 'allowAdFeatures', false); // Privacy-related!
-    ga('send', 'pageview');
+  createAnalytics(true);
 });
+
+(function(i,s,o,g,r,a,m){
+  i['GoogleAnalyticsObject']=r;
+  i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments) },i[r].l =1*new Date();
+  a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+  a.async=1;
+  a.src=g;
+  m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
+
+function createAnalytics (consentToCookies) {
+  const ga = window.ga;
+
+  window.ga_debug = { trace: true };
+
+  if (consentToCookies) {
+    ga('create', GA_ANALYTICS_ID, 'auto');
+  } else {
+    // https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#disabling_cookies
+    ga('create', GA_ANALYTICS_ID, {
+      'storage': 'none'
+    });
+  }
+  // https://developers.google.com/analytics/devguides/collection/analyticsjs/ip-anonymization
+  ga('set', 'anonymizeIp', true);      // Privacy-related!
+  ga('set', 'allowAdFeatures', false); // Privacy-related!
+  ga('send', 'pageview');
+
+  console.debug('createAnalytics:', consentToCookies);
+}
 </script>
 
 

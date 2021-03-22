@@ -137,7 +137,7 @@ export class CookieNotice {
     return {
       action: localStorage.getItem(`${OPT.eventPrefix}action`),
       date: localStorage.getItem(`${OPT.eventPrefix}date`)
-    }
+    };
   }
 
   isAccepted () {
@@ -163,4 +163,6 @@ if (AUTO_RUN) {
   const CN = new CookieNotice();
 
   CN.autoRun();
+} else {
+  console.warn('No auto-run.');
 }
