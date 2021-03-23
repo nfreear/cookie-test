@@ -6,92 +6,111 @@
   © 2021 The Open University. All rights reserved.
 */
 
+// Unexpected use of comma operator.
+// '$' is not defined.
+
+const Event = window.Event;
+// const location = location || window.location;
+
 /* ... */
 
-var OUCookiePolicy = {
+const OUCookiePolicy = {
 
-        getCookie: function () {
-            return Cookie.get("ou_cookie_policy");
-        },
+  getCookie: function () {
+    return Cookie.get('ou_cookie_policy');
+  },
 
-        setCookie: function (a) {
-            return Cookie.set("ou_cookie_policy", a, 365);
-        },
+  setCookie: function (value) {
+    return Cookie.set('ou_cookie_policy', value, 365);
+  },
 
-        accepted: function () {
-            return "continue" == OUCookiePolicy.getCookie() || null != Cookie.get("SAMSsession") || null != Cookie.get("SAMS2session");
-        },
+  accepted: function () {
+    return OUCookiePolicy.getCookie() === 'continue' || Cookie.get('SAMSsession') !== null || Cookie.get('SAMS2session') !== null;
+  },
 
-        getPolicyUrl: function () {
-            var a = window.location.hostname,
-                b = a.indexOf(".");
-            return ".openuniversity.edu" == a.slice(b, a.length) ? "/privacy" : "http://www.open.ac.uk/about/main/strategy-and-policies/policies-and-statements/cookie-use-ou-website";
-        },
+  getPolicyUrl: function () {
+    const a = window.location.hostname;
+    const b = a.indexOf('.');
+    return a.slice(b, a.length) === '.openuniversity.edu' ? '/privacy' : 'http://www.open.ac.uk/about/main/strategy-and-policies/policies-and-statements/cookie-use-ou-website';
+  },
 
-        displayNotification: function () {
-            var a = document.createElement("div");
-            a.setAttribute("class", "ou-cookies-interaction");
-            var b = document.createElement("div");
-            b.setAttribute("class", "ou-container");
-            var c = document.createElement("div");
-            c.setAttribute("class", "ou-row");
-            var d = document.createElement("h3");
-            d.setAttribute("data-translate", "true"), d.setAttribute("id", "ou-header-id1");
-            var e = document.createTextNode("Cookies on our website");
-            d.appendChild(e), c.appendChild(d), b.appendChild(c), a.appendChild(b), OULanguageTranslation.init(d.id);
-            var f = document.createElement("div");
-            f.setAttribute("id", "ou-polWrap"), f.setAttribute("class", "ou-row ou-policyWrap");
-            var g = document.createElement("p");
-            g.setAttribute("data-translate", "true"), g.setAttribute("id", "ou-para-id");
-            var h = document.createTextNode("We use cookies to make sure our websites work effectively and to improve your user experience.  If you continue to use this site we will assume that you are happy with this. However, you can change your cookie settings at any time. ");
-            g.appendChild(h), f.appendChild(g), c.appendChild(f), b.appendChild(c), a.appendChild(b), OULanguageTranslation.init(g);
-            var i = document.createElement("a");
-            i.setAttribute("data-translate", "true"), i.setAttribute("href", OUCookiePolicy.getPolicyUrl()), i.setAttribute("onclick", "javaScript:document.location.href=OUCookiePolicy.getPolicyUrl()"), i.setAttribute("class", "cookieInfo"), i.setAttribute("id", "ou-anchortag-id1");
-            var j = document.createTextNode("More Info/Change Settings.");
-            i.appendChild(j), g.appendChild(i), OULanguageTranslation.init(i);
-            var k = document.createElement("a");
-            k.setAttribute("data-translate", "true"), k.setAttribute("class", "ou-button"), k.setAttribute("id", "ou-cookies-bar-button"), k.setAttribute("role", "button"), k.setAttribute("href", "#"), k.setAttribute("onclick", "javaScript:OUCookiePolicy.accept()");
-            var l = document.createTextNode("Continue");
-            k.appendChild(l), OULanguageTranslation.init(k.id), f.appendChild(k), cookieWrapper = document.createElement("div"), cookieWrapper.id = "i-cookies-bar", cookieWrapper.className = "ou-cookies-bar ou-active", cookieWrapper.appendChild(a), document.body.insertBefore(cookieWrapper, document.body.firstChild), -1 !== navigator.userAgent.indexOf("MSIE") || navigator.appVersion.indexOf("Trident/") > 0 ? $(window).trigger("resize") : window.dispatchEvent(new Event("resize"));
-        },
+  displayNotification: function () {
+    const a = document.createElement('div');
+    a.setAttribute('class', 'ou-cookies-interaction');
+    const b = document.createElement('div');
+    b.setAttribute('class', 'ou-container');
+    const c = document.createElement('div');
+    c.setAttribute('class', 'ou-row');
+    const d = document.createElement('h3');
+    d.setAttribute('data-translate', 'true'), d.setAttribute('id', 'ou-header-id1');
+    const e = document.createTextNode('Cookies on our website');
+    d.appendChild(e), c.appendChild(d), b.appendChild(c), a.appendChild(b), OULanguageTranslation.init(d.id);
+    const f = document.createElement('div');
+    f.setAttribute('id', 'ou-polWrap'), f.setAttribute('class', 'ou-row ou-policyWrap');
+    const g = document.createElement('p');
+    g.setAttribute('data-translate', 'true'), g.setAttribute('id', 'ou-para-id');
+    const h = document.createTextNode('We use cookies to make sure our websites work effectively and to improve your user experience.  If you continue to use this site we will assume that you are happy with this. However, you can change your cookie settings at any time. ');
+    g.appendChild(h), f.appendChild(g), c.appendChild(f), b.appendChild(c), a.appendChild(b), OULanguageTranslation.init(g);
+    const i = document.createElement('a');
+    i.setAttribute('data-translate', 'true'), i.setAttribute('href', OUCookiePolicy.getPolicyUrl()), i.setAttribute('onclick', 'javaScript:document.location.href=OUCookiePolicy.getPolicyUrl()'), i.setAttribute('class', 'cookieInfo'), i.setAttribute('id', 'ou-anchortag-id1');
+    const j = document.createTextNode('More Info/Change Settings.');
+    i.appendChild(j), g.appendChild(i), OULanguageTranslation.init(i);
+    const k = document.createElement('a');
+    k.setAttribute('data-translate', 'true'), k.setAttribute('class', 'ou-button'), k.setAttribute('id', 'ou-cookies-bar-button'), k.setAttribute('role', 'button'), k.setAttribute('href', '#'), k.setAttribute('onclick', 'javaScript:OUCookiePolicy.accept()');
+    const l = document.createTextNode('Continue');
+    k.appendChild(l), OULanguageTranslation.init(k.id), f.appendChild(k);
 
-        accept: function () {
-            OUCookiePolicy.setCookie("continue"), "undefined" != typeof countryCode && "" == countryCode && OUCookiePolicy.setCookie(countryCode), "undefined" != typeof countryCode && "" != countryCode && OUCookiePolicy.setCookie(countryCode), location.reload(!0);
-        },
+    const cookieWrapper = document.createElement('div');
+    cookieWrapper.id = 'i-cookies-bar', cookieWrapper.className = 'ou-cookies-bar ou-active', cookieWrapper.appendChild(a), document.body.insertBefore(cookieWrapper, document.body.firstChild), navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0 ? $(window).trigger('resize') : window.dispatchEvent(new Event('resize'));
+  },
 
-        notify: function () {
-            OUCookiePolicy.displayNotification(), OUCookiePolicy.setCookie("notified");
-        },
+  accept: function () {
+    OUCookiePolicy.setCookie('continue');
 
-        init: function () {
-            OUCookiePolicy.accepted() || OUCookiePolicy.notify();
+    let countryCode;
+    typeof countryCode !== 'undefined' && countryCode === '' && OUCookiePolicy.setCookie(countryCode), typeof countryCode !== 'undefined' && countryCode !== '' && OUCookiePolicy.setCookie(countryCode), location.reload(!0);
+  },
+
+  notify: function () {
+    OUCookiePolicy.displayNotification(), OUCookiePolicy.setCookie('notified');
+  },
+
+  init: function () {
+    OUCookiePolicy.accepted() || OUCookiePolicy.notify();
+  }
+};
+
+const Cookie = {
+
+  set: function (name, val, age) {
+    let d, e, f, g, h;
+    age ? (f = new Date(), f.setTime(f.getTime() + 24 * age * 60 * 60 * 1e3), g = '; expires=' + f.toGMTString()) : g = '', h = location.host, h.split('.').length === 1 ? document.cookie = name + '=' + val + g + '; path=/' : (e = h.split('.'), e.shift(), d = '.' + e.join('.'), document.cookie = name + '=' + val + g + '; path=/; domain=' + d, Cookie.get(name) !== null && Cookie.get(name) === val || (d = '.' + h, document.cookie = name + '=' + val + g + '; path=/; domain=' + d));
+  },
+
+  get: function (name) {
+    for (let b = name + '=', c = document.cookie.split(';'), d = 0; d < c.length; d++) {
+      for (let e = c[d]; e.charAt(0) === ' ';) {
+        e = e.substring(1, e.length);
+
+        if (e.indexOf(b) === 0) {
+          return e.substring(b.length, e.length);
         }
-    },
+      }
+    }
+    return null;
+  },
 
-    Cookie = {
-        set: function (a, b, c) {
-            var d, e, f, g, h;
-            c ? (f = new Date, f.setTime(f.getTime() + 24 * c * 60 * 60 * 1e3), g = "; expires=" + f.toGMTString()) : g = "", h = location.host, 1 === h.split(".").length ? document.cookie = a + "=" + b + g + "; path=/" : (e = h.split("."), e.shift(), d = "." + e.join("."), document.cookie = a + "=" + b + g + "; path=/; domain=" + d, null != Cookie.get(a) && Cookie.get(a) == b || (d = "." + h, document.cookie = a + "=" + b + g + "; path=/; domain=" + d));
-        },
-        get: function (a) {
-            for (var b = a + "=", c = document.cookie.split(";"), d = 0; d < c.length; d++) {
-                for (var e = c[d];
-                    " " == e.charAt(0);) e = e.substring(1, e.length);
-                if (0 == e.indexOf(b)) return e.substring(b.length, e.length);
-            }
-            return null;
-        },
-        erase: function (a) {
-            Cookie.set(a, "", -1);
-        }
-    };
+  erase: function (name) {
+    Cookie.set(name, '', -1);
+  }
+};
 
-window.addEventListener ? window.addEventListener("load", OUCookiePolicy.init, !1) : window.attachEvent && window.attachEvent("onload", OUCookiePolicy.init);
+window.addEventListener ? window.addEventListener('load', OUCookiePolicy.init, !1) : window.attachEvent && window.attachEvent('onload', OUCookiePolicy.init);
 
 /* ... */
 
 function OULanguageTranslation () {
-    this.requiresTranslation = !1;
+  this.requiresTranslation = !1;
 }
 
 /* ... */

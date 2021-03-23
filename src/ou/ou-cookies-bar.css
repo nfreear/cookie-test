@@ -46,6 +46,7 @@
 .ou-footer section {
     display: block;
 }
+
 .ou-cookies-bar p,
 #ou-header p,
 .ou-footer p,
@@ -60,6 +61,7 @@
 .ou-footer dl {
     line-height: 1.5;
 }
+
 .ou-cookies-bar a,
 #ou-header a,
 .ou-footer a {
@@ -151,11 +153,11 @@
 
 #i-cookies-bar *,
 #ou-header *,
-#ou-header *: before,
-#ou-header *: after,
+#ou-header *:before,
+#ou-header *:after,
 #ou-org-footer *,
-#ou-org-footer *: before,
-#ou-org-footer *: after {
+#ou-org-footer *:before,
+#ou-org-footer *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -172,14 +174,14 @@
     max-width: 1180px
 }
 
-.ou-cookies-bar .ou-row: before, #ou-header .ou-row: before, #ou-org-footer .ou-row: before, .ou-cookies-bar .ou-row: after, #ou-header .ou-row: after, #ou-org-footer .ou-row: after, .ou-cookies-bar .int-wrap: before, #ou-header .int-wrap: before, #ou-org-footer .int-wrap: before, .ou-cookies-bar .int-wrap: after, #ou-header .int-wrap: after, #ou-org-footer .int-wrap: after, .ou-cookies-bar .int-innerFeature: before, #ou-header .int-innerFeature: before, #ou-org-footer .int-innerFeature: before, .ou-cookies-bar .int-innerFeature: after, #ou-header .int-innerFeature: after, #ou-org-footer .int-innerFeature: after, .ou-cookies-bar .int-formFeature: before, #ou-header .int-formFeature: before, #ou-org-footer .int-formFeature: before, .ou-cookies-bar .int-formFeature: after, #ou-header .int-formFeature: after, #ou-org-footer .int-formFeature: after, .ou-cookies-bar .int-togglerFeature: before, #ou-header .int-togglerFeature: before, #ou-org-footer .int-togglerFeature: before, .ou-cookies-bar .int-togglerFeature: after, #ou-header .int-togglerFeature: after, #ou-org-footer .int-togglerFeature: after, .ou-cookies-bar .int-togglerFeatureNote: before, #ou-header .int-togglerFeatureNote: before, #ou-org-footer .int-togglerFeatureNote: before, .ou-cookies-bar .int-togglerFeatureNote: after, #ou-header .int-togglerFeatureNote: after, #ou-org-footer .int-togglerFeatureNote: after {
+.ou-cookies-bar .ou-row:before, #ou-header .ou-row:before, #ou-org-footer .ou-row:before, .ou-cookies-bar .ou-row:after, #ou-header .ou-row:after, #ou-org-footer .ou-row:after, .ou-cookies-bar .int-wrap:before, #ou-header .int-wrap:before, #ou-org-footer .int-wrap:before, .ou-cookies-bar .int-wrap:after, #ou-header .int-wrap:after, #ou-org-footer .int-wrap:after, .ou-cookies-bar .int-innerFeature:before, #ou-header .int-innerFeature:before, #ou-org-footer .int-innerFeature:before, .ou-cookies-bar .int-innerFeature:after, #ou-header .int-innerFeature:after, #ou-org-footer .int-innerFeature:after, .ou-cookies-bar .int-formFeature:before, #ou-header .int-formFeature:before, #ou-org-footer .int-formFeature:before, .ou-cookies-bar .int-formFeature:after, #ou-header .int-formFeature:after, #ou-org-footer .int-formFeature:after, .ou-cookies-bar .int-togglerFeature:before, #ou-header .int-togglerFeature:before, #ou-org-footer .int-togglerFeature:before, .ou-cookies-bar .int-togglerFeature:after, #ou-header .int-togglerFeature:after, #ou-org-footer .int-togglerFeature:after, .ou-cookies-bar .int-togglerFeatureNote:before, #ou-header .int-togglerFeatureNote:before, #ou-org-footer .int-togglerFeatureNote:before, .ou-cookies-bar .int-togglerFeatureNote:after, #ou-header .int-togglerFeatureNote:after, #ou-org-footer .int-togglerFeatureNote:after {
     display: table;
     line-height: 0;
     content: "";
 }
 
-.ou-cookies-bar .ou-row: after, #ou-header .ou-row: after, #ou-org-footer .ou-row: after, .ou-cookies-bar .int-wrap: after, #ou-header .int-wrap: after, #ou-org-footer .int-wrap: after, .ou-cookies-bar .int-innerFeature: after, #ou-header .int-innerFeature: after, #ou-org-footer .int-innerFeature: after, .ou-cookies-bar .int-formFeature: after, #ou-header .int-formFeature: after, #ou-org-footer .int-formFeature: after, .ou-cookies-bar .int-togglerFeature: after, #ou-header .int-togglerFeature: after, #ou-org-footer .int-togglerFeature: after, .ou-cookies-bar .int-togglerFeatureNote: after, #ou-header .int-togglerFeatureNote: after, #ou-org-footer .int-togglerFeatureNote: after {
-    clear: both
+.ou-cookies-bar .ou-row:after, #ou-header .ou-row:after, #ou-org-footer .ou-row:after, .ou-cookies-bar .int-wrap:after, #ou-header .int-wrap:after, #ou-org-footer .int-wrap:after, .ou-cookies-bar .int-innerFeature:after, #ou-header .int-innerFeature:after, #ou-org-footer .int-innerFeature:after, .ou-cookies-bar .int-formFeature:after, #ou-header .int-formFeature:after, #ou-org-footer .int-formFeature:after, .ou-cookies-bar .int-togglerFeature:after, #ou-header .int-togglerFeature:after, #ou-org-footer .int-togglerFeature:after, .ou-cookies-bar .int-togglerFeatureNote:after, #ou-header .int-togglerFeatureNote:after, #ou-org-footer .int-togglerFeatureNote:after {
+    clear: both;
 }
 
 .ou-cookies-bar [class*="ou-grid"],
@@ -199,6 +201,7 @@
 .ou-cookies-bar [class*="ou-grid"]: first-child, #ou-header [class*="ou-grid"]: first-child, #ou-org-footer [class*="ou-grid"]: first-child, .ou-cookies-bar [class*="ou-grid"] .ou-grid, #ou-header [class*="ou-grid"] .ou-grid, #ou-org-footer [class*="ou-grid"] .ou-grid, .ou-cookies-bar [class*="int-col"]: first-child, #ou-header [class*="int-col"]: first-child, #ou-org-footer [class*="int-col"]: first-child {
     margin-left: 0;
 }
+
 .ou-cookies-bar .ou-grid12,
 #ou-header .ou-grid12, #ou-org-footer .ou-grid12, .ou-cookies-bar [class*="of2"] .ou-grid6, #ou-header [class*="of2"] .ou-grid6, #ou-org-footer [class*="of2"] .ou-grid6, .ou-cookies-bar [class*="of3"] .ou-grid4, #ou-header [class*="of3"] .ou-grid4, #ou-org-footer [class*="of3"] .ou-grid4, .ou-cookies-bar [class*="1/3rd"] .ou-grid4, #ou-header [class*="1/3rd"] .ou-grid4, #ou-org-footer [class*="1/3rd"] .ou-grid4, .ou-cookies-bar [class*="2/3rd"] .ou-grid8, #ou-header [class*="2/3rd"] .ou-grid8, #ou-org-footer [class*="2/3rd"] .ou-grid8 {
     width: 100%;
@@ -274,7 +277,7 @@
 .ou-cookies-bar a {
     font-weight: 700;
     color: #0e56a7;
-    text-decoration: underline
+    text-decoration: underline;
 }
 .ou-cookies-bar a:hover {
     text-decoration: none;
@@ -294,7 +297,7 @@
     display: inline-table;
     width: 100%;
     vertical-align: top;
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 .ou-cookies-bar .ou-policyWrap p {
     display: table-cell;
