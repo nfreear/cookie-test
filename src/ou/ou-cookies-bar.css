@@ -1,0 +1,370 @@
+@charset "UTF-8";
+
+/*!
+  headerfooter.css
+
+  SOURCE :~ http://www.open.ac.uk/ouheaders/gui/headerfooter.css?2.0.0.56;
+
+  © 2021 The Open University. All rights reserved.
+*/
+
+
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+} */
+
+.ou-cookies-bar,
+#ou-header,
+.ou-footer {
+    font-family: Arial, Helvetica, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.5
+}
+
+.ou-cookies-bar footer,
+#ou-header footer,
+.ou-footer footer,
+.ou-cookies-bar header,
+#ou-header header,
+.ou-footer header,
+.ou-cookies-bar main,
+#ou-header main,
+.ou-footer main,
+.ou-cookies-bar nav,
+#ou-header nav,
+.ou-footer nav,
+.ou-cookies-bar section,
+#ou-header section,
+.ou-footer section {
+    display: block;
+}
+.ou-cookies-bar p,
+#ou-header p,
+.ou-footer p,
+.ou-cookies-bar ul,
+#ou-header ul,
+.ou-footer ul,
+.ou-cookies-bar ol,
+#ou-header ol,
+.ou-footer ol,
+.ou-cookies-bar dl,
+#ou-header dl,
+.ou-footer dl {
+    line-height: 1.5;
+}
+.ou-cookies-bar a,
+#ou-header a,
+.ou-footer a {
+    background: transparent;
+}
+.ou-cookies-bar h3,
+#ou-header h3,
+.ou-footer h3 {
+    font-size: 1.3571425em;
+    line-height: normal;
+}
+.ou-cookies-bar h4,
+#ou-header h4,
+.ou-footer h4 {
+    font-size: 1.21428475em;
+}
+.ou-cookies-bar hr, #ou-header hr, .ou-footer hr {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+.ou-cookies-bar button,
+#ou-header button,
+.ou-footer button,
+.ou-cookies-bar input,
+#ou-header input,
+.ou-footer input,
+.ou-cookies-bar select,
+#ou-header select,
+.ou-footer select,
+.ou-cookies-bar textarea,
+#ou-header textarea,
+.ou-footer textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+.ou-cookies-bar button,
+#ou-header button,
+.ou-footer button,
+.ou-cookies-bar input,
+#ou-header input, .ou-footer input {
+    line-height: normal;
+}
+
+.ou-cookies-bar button,
+#ou-header button,
+.ou-footer button,
+.ou-cookies-bar select,
+#ou-header select,
+.ou-footer select {
+    text-transform: none;
+}
+
+.ou-cookies-bar button,
+#ou-header button,
+.ou-footer button,
+.ou-cookies-bar html input[ type = "button" ],
+#ou-header html input[type="button"],
+.ou-footer html input[type="button"],
+.ou-cookies-bar input[ type = "reset" ],
+#ou-header input[type="reset"],
+.ou-footer input[type="reset"],
+.ou-cookies-bar input[ type = "submit" ],
+#ou-header input[type="submit"],
+.ou-footer input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+.ou-cookies-bar input[ type = "search" ], #ou-header input[type="search"], .ou-footer input[type="search"]{
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.ou-cookies-bar button::-moz-focus-inner,
+#ou-header button::-moz-focus-inner,
+.ou-footer button::-moz-focus-inner,
+.ou-cookies-bar input::-moz-focus-inner,
+#ou-header input::-moz-focus-inner,
+.ou-footer input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+#i-cookies-bar *,
+#ou-header *,
+#ou-header *: before,
+#ou-header *: after,
+#ou-org-footer *,
+#ou-org-footer *: before,
+#ou-org-footer *: after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* ... */
+
+
+.ou-cookies-bar .ou-container, #ou-header .ou-container, #ou-org-footer .ou-container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1180px
+}
+
+.ou-cookies-bar .ou-row: before, #ou-header .ou-row: before, #ou-org-footer .ou-row: before, .ou-cookies-bar .ou-row: after, #ou-header .ou-row: after, #ou-org-footer .ou-row: after, .ou-cookies-bar .int-wrap: before, #ou-header .int-wrap: before, #ou-org-footer .int-wrap: before, .ou-cookies-bar .int-wrap: after, #ou-header .int-wrap: after, #ou-org-footer .int-wrap: after, .ou-cookies-bar .int-innerFeature: before, #ou-header .int-innerFeature: before, #ou-org-footer .int-innerFeature: before, .ou-cookies-bar .int-innerFeature: after, #ou-header .int-innerFeature: after, #ou-org-footer .int-innerFeature: after, .ou-cookies-bar .int-formFeature: before, #ou-header .int-formFeature: before, #ou-org-footer .int-formFeature: before, .ou-cookies-bar .int-formFeature: after, #ou-header .int-formFeature: after, #ou-org-footer .int-formFeature: after, .ou-cookies-bar .int-togglerFeature: before, #ou-header .int-togglerFeature: before, #ou-org-footer .int-togglerFeature: before, .ou-cookies-bar .int-togglerFeature: after, #ou-header .int-togglerFeature: after, #ou-org-footer .int-togglerFeature: after, .ou-cookies-bar .int-togglerFeatureNote: before, #ou-header .int-togglerFeatureNote: before, #ou-org-footer .int-togglerFeatureNote: before, .ou-cookies-bar .int-togglerFeatureNote: after, #ou-header .int-togglerFeatureNote: after, #ou-org-footer .int-togglerFeatureNote: after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.ou-cookies-bar .ou-row: after, #ou-header .ou-row: after, #ou-org-footer .ou-row: after, .ou-cookies-bar .int-wrap: after, #ou-header .int-wrap: after, #ou-org-footer .int-wrap: after, .ou-cookies-bar .int-innerFeature: after, #ou-header .int-innerFeature: after, #ou-org-footer .int-innerFeature: after, .ou-cookies-bar .int-formFeature: after, #ou-header .int-formFeature: after, #ou-org-footer .int-formFeature: after, .ou-cookies-bar .int-togglerFeature: after, #ou-header .int-togglerFeature: after, #ou-org-footer .int-togglerFeature: after, .ou-cookies-bar .int-togglerFeatureNote: after, #ou-header .int-togglerFeatureNote: after, #ou-org-footer .int-togglerFeatureNote: after {
+    clear: both
+}
+
+.ou-cookies-bar [class*="ou-grid"],
+#ou-header [class*="ou-grid"], #ou-org-footer [class*="ou-grid"],
+.ou-cookies-bar [class*="int-col"],
+#ou-header [class*="int-col"], #ou-org-footer [class*="int-col"] {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-left: 2%;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ou-cookies-bar [class*="ou-grid"]: first-child, #ou-header [class*="ou-grid"]: first-child, #ou-org-footer [class*="ou-grid"]: first-child, .ou-cookies-bar [class*="ou-grid"] .ou-grid, #ou-header [class*="ou-grid"] .ou-grid, #ou-org-footer [class*="ou-grid"] .ou-grid, .ou-cookies-bar [class*="int-col"]: first-child, #ou-header [class*="int-col"]: first-child, #ou-org-footer [class*="int-col"]: first-child {
+    margin-left: 0;
+}
+.ou-cookies-bar .ou-grid12,
+#ou-header .ou-grid12, #ou-org-footer .ou-grid12, .ou-cookies-bar [class*="of2"] .ou-grid6, #ou-header [class*="of2"] .ou-grid6, #ou-org-footer [class*="of2"] .ou-grid6, .ou-cookies-bar [class*="of3"] .ou-grid4, #ou-header [class*="of3"] .ou-grid4, #ou-org-footer [class*="of3"] .ou-grid4, .ou-cookies-bar [class*="1/3rd"] .ou-grid4, #ou-header [class*="1/3rd"] .ou-grid4, #ou-org-footer [class*="1/3rd"] .ou-grid4, .ou-cookies-bar [class*="2/3rd"] .ou-grid8, #ou-header [class*="2/3rd"] .ou-grid8, #ou-org-footer [class*="2/3rd"] .ou-grid8 {
+    width: 100%;
+    margin-left: 0;
+}
+.ou-cookies-bar .ou-grid11, #ou-header .ou-grid11, #ou-org-footer .ou-grid11 {
+    width: 91.5%;
+}
+.ou-cookies-bar [class*="2/3rd"] .ou-grid7, #ou-header [class*="2/3rd"] .ou-grid7, #ou-org-footer [class*="2/3rd"] .ou-grid7 {
+    width: 87.25%;
+}
+.ou-cookies-bar .ou-grid10, #ou-header .ou-grid10, #ou-org-footer .ou-grid10, .ou-cookies-bar [class*="of2"] .ou-grid5, #ou-header [class*="of2"] .ou-grid5, #ou-org-footer [class*="of2"] .ou-grid5 {
+    width: 83%;
+}
+.ou-cookies-bar .ou-grid9, #ou-header .ou-grid9, #ou-org-footer .ou-grid9, .ou-cookies-bar [class*="of3"] .ou-grid3, #ou-header [class*="of3"] .ou-grid3, #ou-org-footer [class*="of3"] .ou-grid3, .ou-cookies-bar [class*="1/3rd"] .ou-grid3, #ou-header [class*="1/3rd"] .ou-grid3, #ou-org-footer [class*="1/3rd"] .ou-grid3, .ou-cookies-bar [class*="2/3rd"] .ou-grid6, #ou-header [class*="2/3rd"] .ou-grid6, #ou-org-footer [class*="2/3rd"] .ou-grid6 {
+    width: 74.5%
+}
+.ou-cookies-bar .ou-grid8, #ou-header .ou-grid8, #ou-org-footer .ou-grid8, .ou-cookies-bar [class*="of2"] .ou-grid4, #ou-header [class*="of2"] .ou-grid4, #ou-org-footer [class*="of2"] .ou-grid4, .ou-cookies-bar [class*="2/3rd"], #ou-header [class*="2/3rd"], #ou-org-footer [class*="2/3rd"]{
+    width: 66%;
+}
+.ou-cookies-bar [class*="2/3rd"] .ou-grid5, #ou-header [class*="2/3rd"] .ou-grid5, #ou-org-footer [class*="2/3rd"] .ou-grid5 {
+    width: 61.75%
+}
+.ou-cookies-bar .ou-grid7, #ou-header .ou-grid7, #ou-org-footer .ou-grid7 {
+    width: 57.5%
+}
+.ou-cookies-bar .ou-grid6, #ou-header .ou-grid6, #ou-org-footer .ou-grid6, .ou-cookies-bar [class*="of2"], #ou-header [class*="of2"], #ou-org-footer [class*="of2"], .ou-cookies-bar [class*="of2"] .ou-grid3, #ou-header [class*="of2"] .ou-grid3, #ou-org-footer [class*="of2"] .ou-grid3, .ou-cookies-bar [class*="of3"] .ou-grid2, #ou-header [class*="of3"] .ou-grid2, #ou-org-footer [class*="of3"] .ou-grid2, .ou-cookies-bar [class*="1/3rd"] .ou-grid2, #ou-header [class*="1/3rd"] .ou-grid2, #ou-org-footer [class*="1/3rd"] .ou-grid2, .ou-cookies-bar [class*="2/3rd"] .ou-grid4, #ou-header [class*="2/3rd"] .ou-grid4, #ou-org-footer [class*="2/3rd"] .ou-grid4 {
+    width: 49%;
+}
+.ou-cookies-bar .ou-grid5, #ou-header .ou-grid5, #ou-org-footer .ou-grid5 {
+    width: 40.5%;
+}
+.ou-cookies-bar [class*="2/3rd"] .ou-grid3, #ou-header [class*="2/3rd"] .ou-grid3, #ou-org-footer [class*="2/3rd"] .ou-grid3 {
+    width: 36.25%;
+}
+.ou-cookies-bar .ou-grid4, #ou-header .ou-grid4, #ou-org-footer .ou-grid4, .ou-cookies-bar [class*="of2"] .ou-grid2, #ou-header [class*="of2"] .ou-grid2, #ou-org-footer [class*="of2"] .ou-grid2, .ou-cookies-bar [class*="of3"], #ou-header [class*="of3"], #ou-org-footer [class*="of3"], .ou-cookies-bar [class*="1/3rd"], #ou-header [class*="1/3rd"], #ou-org-footer [class*="1/3rd"]{
+    width: 32%;
+}
+.ou-cookies-bar .ou-grid3, #ou-header .ou-grid3, #ou-org-footer .ou-grid3, .ou-cookies-bar [class*="of3"] .ou-grid1, #ou-header [class*="of3"] .ou-grid1, #ou-org-footer [class*="of3"] .ou-grid1, .ou-cookies-bar [class*="1/3rd"] .ou-grid1, #ou-header [class*="1/3rd"] .ou-grid1, #ou-org-footer [class*="1/3rd"] .ou-grid1, .ou-cookies-bar [class*="2/3rd"] .ou-grid2, #ou-header [class*="2/3rd"] .ou-grid2, #ou-org-footer [class*="2/3rd"] .ou-grid2 {
+    width: 23.5%;
+}
+.ou-cookies-bar .ou-grid2, #ou-header .ou-grid2, #ou-org-footer .ou-grid2, .ou-cookies-bar [class*="of2"] .ou-grid1, #ou-header [class*="of2"] .ou-grid1, #ou-org-footer [class*="of2"] .ou-grid1 {
+    width: 15%;
+}
+.ou-cookies-bar [class*="2/3rd"] .ou-grid1, #ou-header [class*="2/3rd"] .ou-grid1, #ou-org-footer [class*="2/3rd"] .ou-grid1 {
+    width: 10.75%;
+}
+
+.ou-cookies-bar .ou-grid1, #ou-header .ou-grid1, #ou-org-footer .ou-grid1 {
+    width: 6.5%;
+}
+
+@media (max-width: 767px) {
+    .ou-cookies-bar [class*="ou-grid"], #ou-header [class*="ou-grid"], #ou-org-footer [class*="ou-grid"]{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ou-cookies-bar [class*="col"], #ou-header [class*="col"], #ou-org-footer [class*="col"], .ou-cookies-bar [class*="/3rd"], #ou-header [class*="/3rd"], #ou-org-footer [class*="/3rd"], .ou-cookies-bar [class*="col"] [class*="ou-grid"], #ou-header [class*="col"] [class*="ou-grid"], #ou-org-footer [class*="col"] [class*="ou-grid"]{
+        width: 100%;
+        margin-left: 0;
+    }
+    .ou-cookies-bar [class*="of2"], #ou-header [class*="of2"], #ou-org-footer [class*="of2"], .ou-cookies-bar .int-col3of3, #ou-header .int-col3of3, #ou-org-footer .int-col3of3 {
+        margin-left: 0;
+    }
+}
+
+/* ... */
+
+.ou-cookies-bar {
+    background: #f8f6ed;
+    color: #414042
+}
+.ou-cookies-bar a {
+    font-weight: 700;
+    color: #0e56a7;
+    text-decoration: underline
+}
+.ou-cookies-bar a:hover {
+    text-decoration: none;
+}
+.ou-cookies-bar p {
+    margin-top: 0;
+}
+.ou-cookies-bar h3 {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: .5em;
+    margin-top: .67em;
+}
+.ou-cookies-bar .ou-policyWrap {
+    display: inline-table;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 1em
+}
+.ou-cookies-bar .ou-policyWrap p {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+    padding-right: 2em;
+}
+
+.ou-cookies-bar .ou-policyWrap .ou-button,
+.ou-cookies-bar .ou-policyWrap a.ou-button {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    transition: .2s ease-out;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    background: #e21481;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    padding: .6em .8em;
+    display: inline-block;
+    margin: 0 0 .875em 0;
+    border: 1px solid #e21481;
+    display: inline-table;
+    width: 1%;
+    margin: 0;
+}
+
+.ou-cookies-bar .ou-policyWrap .ou-button: hover,
+.ou-cookies-bar .ou-policyWrap a.ou-button: hover,
+.ou-cookies-bar .ou-policyWrap .ou-button: focus,
+.ou-cookies-bar .ou-policyWrap a.ou-button: focus {
+    background: #b51067;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.ou-cookies-bar .ou-policyWrap .ou-button: focus,
+.ou-cookies-bar .ou-policyWrap a.ou-button: focus {
+    outline: thin dotted;
+}
+
+.ou-cookies-bar .ou-policyWrap .ou-button: active,
+.ou-cookies-bar .ou-policyWrap a.ou-button: active {
+    background: #e63794;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .ou-cookies-bar p {
+        padding-right: 45px;
+    }
+    .ou-cookies-bar .ou-button {
+        font-size: .875em;
+    }
+    .ou-cookies-bar .ou-policyWrap p {
+        display: block;
+    }
+
+    .ou-cookies-bar .ou-policyWrap .ou-button,
+    .ou-cookies-bar .ou-policyWrap a.ou-button {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+/* ... */
+
+/* End. */
