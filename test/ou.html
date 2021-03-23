@@ -32,55 +32,10 @@
 </div>
 
 
-<script type="XX">
-const GA_ANALYTICS_ID = 'UA-8330079-10'; // 'UA-1036645-1'; // EDIT !!
+<script type="X-module">
 
-window.addEventListener('iet-ou.cookie-notice:reject', ev => {
-  console.debug('Event received:', ev);
+import { createAnalytics } from '../src/analytics.js';
 
-  // https://developers.google.com/analytics/devguides/collection/analyticsjs/user-opt-out
-  // window[`ga-disable-${GA_ANALYTICS_ID}`] = true;
-
-  createAnalytics(false);
-});
-
-window.addEventListener('iet-ou.cookie-notice:accept', ev => {
-  console.debug('Event received:', ev);
-
-  // Do something, for example, setup analytics ...?!
-
-  createAnalytics(true);
-});
-
-(function(i,s,o,g,r,a,m){
-  i['GoogleAnalyticsObject']=r;
-  i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments) },i[r].l =1*new Date();
-  a=s.createElement(o),m=s.getElementsByTagName(o)[0];
-  a.async=1;
-  a.src=g;
-  m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics_debug.js','ga');
-
-function createAnalytics (consentToCookies) {
-  const ga = window.ga;
-
-  window.ga_debug = { trace: true };
-
-  if (consentToCookies) {
-    ga('create', GA_ANALYTICS_ID, 'auto');
-  } else {
-    // https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#disabling_cookies
-    ga('create', GA_ANALYTICS_ID, {
-      'storage': 'none'
-    });
-  }
-  // https://developers.google.com/analytics/devguides/collection/analyticsjs/ip-anonymization
-  ga('set', 'anonymizeIp', true);      // Privacy-related!
-  ga('set', 'allowAdFeatures', false); // Privacy-related!
-  ga('send', 'pageview');
-
-  console.debug('createAnalytics:', consentToCookies);
-}
 </script>
 
 
