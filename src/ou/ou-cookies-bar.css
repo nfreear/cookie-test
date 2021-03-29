@@ -8,14 +8,6 @@
   © 2021 The Open University. All rights reserved.
 */
 
-
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
-/* body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-} */
-
 .ou-cookies-bar,
 #ou-header,
 .ou-footer {
@@ -198,7 +190,7 @@
     box-sizing: border-box;
 }
 
-.ou-cookies-bar [class*="ou-grid"]: first-child, #ou-header [class*="ou-grid"]: first-child, #ou-org-footer [class*="ou-grid"]: first-child, .ou-cookies-bar [class*="ou-grid"] .ou-grid, #ou-header [class*="ou-grid"] .ou-grid, #ou-org-footer [class*="ou-grid"] .ou-grid, .ou-cookies-bar [class*="int-col"]: first-child, #ou-header [class*="int-col"]: first-child, #ou-org-footer [class*="int-col"]: first-child {
+.ou-cookies-bar [class*="ou-grid"]:first-child, #ou-header [class*="ou-grid"]:first-child, #ou-org-footer [class*="ou-grid"]:first-child, .ou-cookies-bar [class*="ou-grid"] .ou-grid, #ou-header [class*="ou-grid"] .ou-grid, #ou-org-footer [class*="ou-grid"] .ou-grid, .ou-cookies-bar [class*="int-col"]:first-child, #ou-header [class*="int-col"]:first-child, #ou-org-footer [class*="int-col"]:first-child {
     margin-left: 0;
 }
 
@@ -330,22 +322,22 @@
     margin: 0;
 }
 
-.ou-cookies-bar .ou-policyWrap .ou-button: hover,
-.ou-cookies-bar .ou-policyWrap a.ou-button: hover,
-.ou-cookies-bar .ou-policyWrap .ou-button: focus,
-.ou-cookies-bar .ou-policyWrap a.ou-button: focus {
+.ou-cookies-bar .ou-policyWrap .ou-button:hover,
+.ou-cookies-bar .ou-policyWrap a.ou-button:hover,
+.ou-cookies-bar .ou-policyWrap .ou-button:focus,
+.ou-cookies-bar .ou-policyWrap a.ou-button:focus {
     background: #b51067;
     color: #fff;
     text-decoration: underline;
 }
 
-.ou-cookies-bar .ou-policyWrap .ou-button: focus,
-.ou-cookies-bar .ou-policyWrap a.ou-button: focus {
+.ou-cookies-bar .ou-policyWrap .ou-button:focus,
+.ou-cookies-bar .ou-policyWrap a.ou-button:focus {
     outline: thin dotted;
 }
 
-.ou-cookies-bar .ou-policyWrap .ou-button: active,
-.ou-cookies-bar .ou-policyWrap a.ou-button: active {
+.ou-cookies-bar .ou-policyWrap .ou-button:active,
+.ou-cookies-bar .ou-policyWrap a.ou-button:active {
     background: #e63794;
     color: #fff;
 }
@@ -368,6 +360,4 @@
     }
 }
 
-/* ... */
-
-/* End. */
+/* End: ou-cookies-bar.css */

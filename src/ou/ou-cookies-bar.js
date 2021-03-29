@@ -1,5 +1,5 @@
 /*!
-  headerfooter.js
+  ou-cookies-bar.js (headerfooter.js)
 
   SOURCE :~ http://www.open.ac.uk/ouheaders/js/headerfooter.min.js?2.0.0.56;
 
@@ -9,8 +9,12 @@
 // Unexpected use of comma operator.
 // '$' is not defined.
 
+const $ = /* window.$ || */ () => {}; // jQuery is not needed!
+
 const Event = window.Event;
-// const location = location || window.location;
+// const location = window.location;
+
+/*! ou.headers 2.0.0.56 */
 
 /* ... */
 
@@ -68,7 +72,7 @@ const OUCookiePolicy = {
     OUCookiePolicy.setCookie('continue');
 
     let countryCode;
-    typeof countryCode !== 'undefined' && countryCode === '' && OUCookiePolicy.setCookie(countryCode), typeof countryCode !== 'undefined' && countryCode !== '' && OUCookiePolicy.setCookie(countryCode), location.reload(!0);
+    typeof countryCode !== 'undefined' && countryCode === '' && OUCookiePolicy.setCookie(countryCode), typeof countryCode !== 'undefined' && countryCode !== '' && OUCookiePolicy.setCookie(countryCode), window.location.reload(!0);
   },
 
   notify: function () {
@@ -83,6 +87,8 @@ const OUCookiePolicy = {
 const Cookie = {
 
   set: function (name, val, age) {
+    const location = window.location;
+
     let d, e, f, g, h;
     age ? (f = new Date(), f.setTime(f.getTime() + 24 * age * 60 * 60 * 1e3), g = '; expires=' + f.toGMTString()) : g = '', h = location.host, h.split('.').length === 1 ? document.cookie = name + '=' + val + g + '; path=/' : (e = h.split('.'), e.shift(), d = '.' + e.join('.'), document.cookie = name + '=' + val + g + '; path=/; domain=' + d, Cookie.get(name) !== null && Cookie.get(name) === val || (d = '.' + h, document.cookie = name + '=' + val + g + '; path=/; domain=' + d));
   },
@@ -105,6 +111,9 @@ const Cookie = {
   }
 };
 
+/*
+  Auto-load: OUCookiePolicy.init()
+*/
 window.addEventListener ? window.addEventListener('load', OUCookiePolicy.init, !1) : window.attachEvent && window.attachEvent('onload', OUCookiePolicy.init);
 
 /* ... */
@@ -119,6 +128,9 @@ OULanguageTranslation.init = function (a) {
   /* No-op. */
 };
 
-/* ... */
+// FIX: a reference for 'onclick' 'javascript:' handlers above!
+window.OUCookiePolicy = OUCookiePolicy;
 
-/* End. */
+// console.debug(typeof OUCookiePolicy);
+
+/* End: ou-cookies-bar.js */

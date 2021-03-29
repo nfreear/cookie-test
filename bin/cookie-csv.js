@@ -19,7 +19,7 @@ function cookieJsonToCsv (data) {
     const { name, value, path, domain, expirationDate, session, id } = cookie;
     const time = expirationDate ? new Date(expirationDate * 1000).toISOString() : null;
 
-    CSV.push(`${name},${value},${path},${domain},${expirationDate||'-'},${time},${session},${id}`);
+    CSV.push(`${name},${value},${path},${domain},${expirationDate || '-'},${time},${session},${id}`);
   });
 
   return CSV;
