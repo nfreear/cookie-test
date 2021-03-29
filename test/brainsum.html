@@ -5,16 +5,10 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="data:,">
 
 
   <title>* Cookie consent test / BRAINSUM</title>
-
-  <link href="assets/css/page.min.css" rel="XX-stylesheet">
-
-  <link rel="icon" href="assets/img/favicon.ico">
-
-  <script data-XX-src="brainsum/cookieconsent.js"></script>
-
 
   <style>
   body { font: 1.1rem/2 serif; margin: 0 auto; max-width: 35rem; }
@@ -29,9 +23,11 @@
   <script src="https://brainsum.github.io/cookieconsent/assets/js/cookieconsent.min.js"></script>
 
   <script>
-    console.debug(window.CookieConsent);
+  const brainsumCookieConsent = window.CookieConsent;
 
-    window.CookieConsent.init({
+    console.debug(brainsumCookieConsent);
+
+    brainsumCookieConsent.init({
       language: {
         current: 'en'
       },
@@ -102,6 +98,7 @@
     setTimeout(() => {
       const CC_BAR = document.querySelector('#cconsent-bar');
       const CC_MODAL = document.querySelector('#cconsent-modal');
+      const CC_EDIT = CC_BAR.querySelector('.ccb__edit');
 
       CC_BAR.querySelector('.consent-give').addEventListener('click', ev => {
         console.debug('"Accept all cookies" clicked:', ev);
@@ -111,14 +108,17 @@
         console.debug('"Cookie Settings" clicked', ev);
       });
 
+      CC_EDIT.setAttribute('role', 'button');
+      CC_EDIT.setAttribute('tabindex', '0');
+
     }, 1000);
   </script>
 
 
 
-  <h1>BRAINSUM cookieconsent test</h1>
+<h1>BRAINSUM cookieconsent test</h1>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 
 <pre>
@@ -132,8 +132,5 @@ NDF, 16-March-2021.
 * https://github.com/brainsum/cookieconsent
 
 </pre>
-
-
-  <script data-XX-src="assets/js/page.min.js"></script>
 
 </html>
